@@ -1,0 +1,62 @@
+<p:sp xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+				<p:nvSpPr>
+					<p:cNvPr id="2" name="TextBox 4"/>
+					<p:cNvSpPr txBox="1"/>
+					<p:nvPr/>
+				</p:nvSpPr>
+				<p:spPr>
+					<a:xfrm rot="720000">
+						<a:off x="0" y="0"/>
+						<a:ext cx="200000" cy="200000"/>
+					</a:xfrm>
+					<a:prstGeom prst="rect">
+						<a:avLst/>
+					</a:prstGeom>
+					<a:noFill/>
+				</p:spPr>
+				<p:txBody>
+					<a:bodyPr wrap="square" rtlCol="0">
+						<a:spAutoFit/>
+					</a:bodyPr>
+					<a:lstStyle/>
+					<a:p>
+						<a:r>
+							<a:rPr lang="en-US" altLang="zh-CN" sz="1850" dirty="0" err="1" smtClean="0">
+								<a:latin typeface="黑体" pitchFamily="34" charset="-122"/>
+								<a:ea typeface="黑体" pitchFamily="34" charset="-122"/>
+							</a:rPr>
+							<a:t>你试试这个字体</a:t>
+						</a:r>
+						<a:endParaRPr lang="zh-CN" altLang="en-US" sz="1850" dirty="0">
+							<a:latin typeface="黑体" pitchFamily="34" charset="-122"/>
+							<a:ea typeface="黑体" pitchFamily="34" charset="-122"/>
+						</a:endParaRPr>
+					</a:p>
+				</p:txBody>
+</p:sp>
+<a:xfrm>
+	<a:off x="539552" y="1556792"/>
+	<a:ext cx="8064896" cy="1231106"/>
+</a:xfrm>
+<!--旋转角度 乘以60000
+例如：<a:xfrm rot="720000">   实际旋转角度为12°
+         <a:off x="0" y="0"/>  x和y表示坐标点，以左上角位置（0，0）为准
+		 <a:ext cx="" xy=""/>  cx和cy表示文本框的宽度和高度 10cm*360000
+fontSize  ：sz   乘以100   
+例如：<a:rPr lang="en-US" altLang="zh-CN" sz="1850" dirty="0" err="1" smtClean="0">   实际fontSize为18.5
+
+其中<p:txBody></p:txBody>表示一个文本框
+其子节点 <a:p></a:p>表示一行文本
+<a:p></a:p>
+	 <a:pPr algn="ctr"/>  默认左对齐，没有该节点表示左对齐，algn属性表示文本对齐  ctr：居中  r:右对齐
+     <a:r></a:r>
+		<a:rPr lang="zh-CN" altLang="en-US" sz="1850" dirty="0" smtClean="0">  lang表示语言   sz表示fontSize*100
+			<a:latin typeface="仿宋" pitchFamily="34" charset="-122"/>  typeface表示fontFamily  另外两个属性不知道
+			<a:ea typeface="仿宋" pitchFamily="34" charset="-122"/>
+		</a:rPr>
+		<a:t>该行文本</a:t>
+	 <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1850" dirty="0"></a:endParaRPr>
+	 图片中的<a:xfrm></a:xfrm>
+	 off：714375 / 1.98 = 360795.4545454545     猜测都是厘米乘以360000
+	 ext:3071812 / 8.53 = 360118.6400937866
+-->
