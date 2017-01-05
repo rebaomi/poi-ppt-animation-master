@@ -102,12 +102,6 @@ fontSize  ：sz   乘以100
 	  14.2875cm  对应像素（* 75.59055118110236(px/cm)）=   1080   0.0132291666666667（cm/px）
 	  
 	  
-	  网页字体和office字体大小对应：
-	  ppt web页面字体和ppt的字体转换比例是4：3  还要再乘上100  
-	  office :  36   web : 48
-	  office : 8     web : 10.666666666666666
-	  最终结果就是 pptFontSize = webFontSize * (3/4) * 100 = webFontSize * 75
-	  
 	  
 	  字体偏移：
 	  ？？问题： 设计页中左上角(0,0)位置对应ppt中有略微向下向右偏移
@@ -129,6 +123,24 @@ fontSize  ：sz   乘以100
 	  结论：偏移厘米数*100 比 网页字体大小  4：3   cm = (4 * size / (3 * 100))
 	  
 	  以上都是微软雅黑字体
+	  
+	  web      office
+	  12		9
+	  27        20.4
+	  
+	  注意：当字体过大的时候 偏移会出现0.2cm的偏差（向上），数字可能跟字号大小有关系，字体越大偏移越大！！
+	  
+	  网页字体和office字体大小对应：
+	  ppt web页面字体和ppt的字体转换比例是4：3  还要再乘上100  
+	  office :  36   web : 48
+	  office : 8     web : 10.666666666666666
+	  正常情况的最终结果就是 pptFontSize = webFontSize * (3/4) * 100 = webFontSize * 75
+	  16*9属于特殊情况：因为office的ppt尺寸是33.867cm*19.05cm ,而docx4j里面的尺寸是25.4cm*14.2875cm, 
+						代码是基于docx4j的，所以要按比例缩放成docx4j的。
+				   计算公式：pptFontSize = webFontSize * (3/4) * 100 * （25.4/33.867） 
+									= webFontSize * 75 * 0.75
+									= webFontSize * 42.1875
+	  
 	  
 	  还有行距的问题
 -->
