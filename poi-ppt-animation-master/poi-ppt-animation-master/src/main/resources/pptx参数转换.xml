@@ -1,40 +1,536 @@
-<p:sp xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
-				<p:nvSpPr>
-					<p:cNvPr id="2" name="TextBox 4"/>
-					<p:cNvSpPr txBox="1"/>
-					<p:nvPr/>
-				</p:nvSpPr>
-				<p:spPr>
-					<a:xfrm rot="720000">
-						<a:off x="0" y="0"/>
-						<a:ext cx="200000" cy="200000"/>
-					</a:xfrm>
-					<a:prstGeom prst="rect">
-						<a:avLst/>
-					</a:prstGeom>
-					<a:noFill/>
-				</p:spPr>
-				<p:txBody>
-					<a:bodyPr wrap="square" rtlCol="0">
-						<a:spAutoFit/>
-					</a:bodyPr>
-					<a:lstStyle/>
-					<a:p>
-						<a:r>
-							<a:rPr lang="en-US" altLang="zh-CN" sz="1850" dirty="0" err="1" smtClean="0">
-								<a:latin typeface="黑体" pitchFamily="34" charset="-122"/>
-								<a:ea typeface="黑体" pitchFamily="34" charset="-122"/>
-							</a:rPr>
-							<a:t>你试试这个字体</a:t>
-						</a:r>
-						<a:endParaRPr lang="zh-CN" altLang="en-US" sz="1850" dirty="0">
-							<a:latin typeface="黑体" pitchFamily="34" charset="-122"/>
-					
-							<a:ea typeface="黑体" pitchFamily="34" charset="-122"/>
-						</a:endParaRPr>
-					</a:p>
-				</p:txBody>
-</p:sp>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<p:sld xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:ns6="http://schemas.openxmlformats.org/drawingml/2006/chartDrawing" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:ns12="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:ns13="http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas" xmlns:v="urn:schemas-microsoft-com:vml">
+    <p:cSld>
+        <p:spTree>
+            <p:nvGrpSpPr>
+                <p:cNvPr id="1" name=""/>
+                <p:cNvGrpSpPr/>
+                <p:nvPr/>
+            </p:nvGrpSpPr>
+            <p:grpSpPr>
+                <a:xfrm>
+                    <a:off x="0" y="0"/>
+                    <a:ext cx="0" cy="0"/>
+                    <a:chOff x="0" y="0"/>
+                    <a:chExt cx="0" cy="0"/>
+                </a:xfrm>
+            </p:grpSpPr>
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="5" name="TextBox 4"/>
+                    <p:cNvSpPr txBox="true"/>
+                    <p:nvPr/>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="0" y="2884"/>
+                        <a:ext cx="1604963" cy="338138"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr wrap="square" lIns="0" tIns="0" bIns="0" rtlCol="false">
+                        <a:spAutoFit/>
+                    </a:bodyPr>
+                    <a:lstStyle/>
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-US" altLang="zh-CN" sz="450" dirty="false" err="true" smtClean="false">
+<a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+<a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            </a:rPr>
+                            <a:t>双击修改</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-CN" altLang="en-US" sz="450" dirty="false">
+                            <a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            <a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="5" name="TextBox 4"/>
+                    <p:cNvSpPr txBox="true"/>
+                    <p:nvPr/>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="1097007" y="1609622"/>
+                        <a:ext cx="1376363" cy="271463"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr wrap="square" lIns="0" tIns="0" bIns="0" rtlCol="false">
+                        <a:spAutoFit/>
+                    </a:bodyPr>
+                    <a:lstStyle/>
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-US" altLang="zh-CN" sz="1395" dirty="false" err="true" smtClean="false">
+<a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+<a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            </a:rPr>
+                            <a:t>双击修改</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1395" dirty="false">
+                            <a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            <a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="5" name="TextBox 4"/>
+                    <p:cNvSpPr txBox="true"/>
+                    <p:nvPr/>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="858528" y="1259091"/>
+                        <a:ext cx="871538" cy="180975"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr wrap="square" lIns="0" tIns="0" bIns="0" rtlCol="false">
+                        <a:spAutoFit/>
+                    </a:bodyPr>
+                    <a:lstStyle/>
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-US" altLang="zh-CN" sz="1019" dirty="false" err="true" smtClean="false">
+<a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+<a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            </a:rPr>
+                            <a:t>双击修改</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1019" dirty="false">
+                            <a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            <a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="5" name="TextBox 4"/>
+                    <p:cNvSpPr txBox="true"/>
+                    <p:nvPr/>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="8394492" y="1722797"/>
+                        <a:ext cx="1604963" cy="338138"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr wrap="square" lIns="0" tIns="0" bIns="0" rtlCol="false">
+                        <a:spAutoFit/>
+                    </a:bodyPr>
+                    <a:lstStyle/>
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-US" altLang="zh-CN" sz="975" dirty="false" err="true" smtClean="false">
+<a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+<a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            </a:rPr>
+                            <a:t>dfdasfadsf
+dfas f
+ fas  
+as阿斯顿发生
+阿道夫</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-CN" altLang="en-US" sz="975" dirty="false">
+                            <a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            <a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="5" name="TextBox 4"/>
+                    <p:cNvSpPr txBox="true"/>
+                    <p:nvPr/>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="4572000" y="1687842"/>
+                        <a:ext cx="1376363" cy="271463"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr wrap="square" lIns="0" tIns="0" bIns="0" rtlCol="false">
+                        <a:spAutoFit/>
+                    </a:bodyPr>
+                    <a:lstStyle/>
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-US" altLang="zh-CN" sz="1050" dirty="false" err="true" smtClean="false">
+<a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+<a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            </a:rPr>
+                            <a:t>双击修改</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1050" dirty="false">
+                            <a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            <a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="5" name="TextBox 4"/>
+                    <p:cNvSpPr txBox="true"/>
+                    <p:nvPr/>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="2619869" y="1430325"/>
+                        <a:ext cx="871538" cy="180975"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr wrap="square" lIns="0" tIns="0" bIns="0" rtlCol="false">
+                        <a:spAutoFit/>
+                    </a:bodyPr>
+                    <a:lstStyle/>
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-US" altLang="zh-CN" sz="1019" dirty="false" err="true" smtClean="false">
+<a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+<a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            </a:rPr>
+                            <a:t>双击修改</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1019" dirty="false">
+                            <a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            <a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="5" name="TextBox 4"/>
+                    <p:cNvSpPr txBox="true"/>
+                    <p:nvPr/>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="6814" y="3968553"/>
+                        <a:ext cx="1862138" cy="457200"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr wrap="square" lIns="0" tIns="0" bIns="0" rtlCol="false">
+                        <a:spAutoFit/>
+                    </a:bodyPr>
+                    <a:lstStyle/>
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-US" altLang="zh-CN" sz="3450" dirty="false" err="true" smtClean="false">
+<a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+<a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            </a:rPr>
+                            <a:t>双击修改</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-CN" altLang="en-US" sz="3450" dirty="false">
+                            <a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            <a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="5" name="TextBox 4"/>
+                    <p:cNvSpPr txBox="true"/>
+                    <p:nvPr/>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="2053331" y="1350259"/>
+                        <a:ext cx="1376363" cy="271463"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr wrap="square" lIns="0" tIns="0" bIns="0" rtlCol="false">
+                        <a:spAutoFit/>
+                    </a:bodyPr>
+                    <a:lstStyle/>
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-US" altLang="zh-CN" sz="1395" dirty="false" err="true" smtClean="false">
+<a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+<a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            </a:rPr>
+                            <a:t>双击修改</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1395" dirty="false">
+                            <a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            <a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <p:pic>
+                <p:nvPicPr>
+                    <p:cNvPr id="1" name="null.png" descr="descr"/>
+                    <p:cNvPicPr>
+                        <a:picLocks noChangeAspect="true"/>
+                    </p:cNvPicPr>
+                    <p:nvPr/>
+                </p:nvPicPr>
+                <p:blipFill>
+                    <a:blip cstate="print" r:embed="rId2"/>
+                    <a:stretch>
+                        <a:fillRect/>
+                    </a:stretch>
+                </p:blipFill>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="2839046" y="2016769"/>
+                        <a:ext cx="590522" cy="387708"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                </p:spPr>
+            </p:pic>
+            <p:pic>
+                <p:nvPicPr>
+                    <p:cNvPr id="1" name="null.png" descr="descr"/>
+                    <p:cNvPicPr>
+                        <a:picLocks noChangeAspect="true"/>
+                    </p:cNvPicPr>
+                    <p:nvPr/>
+                </p:nvPicPr>
+                <p:blipFill>
+                    <a:blip cstate="print" r:embed="rId3"/>
+                    <a:stretch>
+                        <a:fillRect/>
+                    </a:stretch>
+                </p:blipFill>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="751779" y="2987525"/>
+                        <a:ext cx="590522" cy="730246"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                </p:spPr>
+            </p:pic>
+            <p:pic>
+                <p:nvPicPr>
+                    <p:cNvPr id="1" name="null.png" descr="descr"/>
+                    <p:cNvPicPr>
+                        <a:picLocks noChangeAspect="true"/>
+                    </p:cNvPicPr>
+                    <p:nvPr/>
+                </p:nvPicPr>
+                <p:blipFill>
+                    <a:blip cstate="print" r:embed="rId4"/>
+                    <a:stretch>
+                        <a:fillRect/>
+                    </a:stretch>
+                </p:blipFill>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="994661" y="1894456"/>
+                        <a:ext cx="1249178" cy="569340"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                </p:spPr>
+            </p:pic>
+            <p:pic>
+                <p:nvPicPr>
+                    <p:cNvPr id="1" name="null.png" descr="descr"/>
+                    <p:cNvPicPr>
+                        <a:picLocks noChangeAspect="true"/>
+                    </p:cNvPicPr>
+                    <p:nvPr/>
+                </p:nvPicPr>
+                <p:blipFill>
+                    <a:blip cstate="print" r:embed="rId5"/>
+                    <a:stretch>
+                        <a:fillRect/>
+                    </a:stretch>
+                </p:blipFill>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="6486654" y="1741246"/>
+                        <a:ext cx="1907839" cy="469444"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                </p:spPr>
+            </p:pic>
+            <p:pic>
+                <p:nvPicPr>
+                    <p:cNvPr id="1" name="null.png" descr="descr"/>
+                    <p:cNvPicPr>
+                        <a:picLocks noChangeAspect="true"/>
+                    </p:cNvPicPr>
+                    <p:nvPr/>
+                </p:nvPicPr>
+                <p:blipFill>
+                    <a:blip cstate="print" r:embed="rId6"/>
+                    <a:stretch>
+                        <a:fillRect/>
+                    </a:stretch>
+                </p:blipFill>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="-56841" y="3352631"/>
+                        <a:ext cx="847212" cy="120193"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                </p:spPr>
+            </p:pic>
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="5" name="TextBox 4"/>
+                    <p:cNvSpPr txBox="true"/>
+                    <p:nvPr/>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm rot="0">
+                        <a:off x="366967" y="2384348"/>
+                        <a:ext cx="1604963" cy="338138"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr wrap="square" lIns="0" tIns="0" bIns="0" rtlCol="false">
+                        <a:spAutoFit/>
+                    </a:bodyPr>
+                    <a:lstStyle/>
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-US" altLang="zh-CN" sz="975" dirty="false" err="true" smtClean="false">
+<a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+<a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            </a:rPr>
+                            <a:t>dfdasfadsf
+dfas f
+ fas  
+as阿斯顿发生
+阿道夫</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-CN" altLang="en-US" sz="975" dirty="false">
+                            <a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            <a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <p:pic>
+                <p:nvPicPr>
+                    <p:cNvPr id="1" name="2016/12/12/bfc7274b-b8b0-4a96-a84c-9645a7f59185@0e_0o_1l_721w.png.png" descr="descr"/>
+                    <p:cNvPicPr>
+                        <a:picLocks noChangeAspect="true"/>
+                    </p:cNvPicPr>
+                    <p:nvPr/>
+                </p:nvPicPr>
+                <p:blipFill>
+                    <a:blip cstate="print" r:embed="rId7"/>
+                    <a:stretch>
+                        <a:fillRect/>
+                    </a:stretch>
+                </p:blipFill>
+                <p:spPr>
+                    <a:xfrm rot="21600000">
+                        <a:off x="2920653" y="2987525"/>
+                        <a:ext cx="3435432" cy="1933594"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                </p:spPr>
+            </p:pic>
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="5" name="TextBox 4"/>
+                    <p:cNvSpPr txBox="true"/>
+                    <p:nvPr/>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm rot="21592779">
+                        <a:off x="2921544" y="3351210"/>
+                        <a:ext cx="4348163" cy="990600"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr wrap="square" lIns="0" tIns="0" bIns="0" rtlCol="false">
+                        <a:spAutoFit/>
+                    </a:bodyPr>
+                    <a:lstStyle/>
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-US" altLang="zh-CN" sz="5924" dirty="false" err="true" smtClean="false">
+<a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+<a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            </a:rPr>
+                            <a:t>双击修改</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-CN" altLang="en-US" sz="5924" dirty="false">
+                            <a:latin typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                            <a:ea typeface="Microsoft YaHei" pitchFamily="34" charset="-122"/>
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+        </p:spTree>
+    </p:cSld>
+</p:sld>
+
 <!--
 
 <a:xfrm>
