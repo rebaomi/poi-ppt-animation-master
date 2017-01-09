@@ -668,9 +668,52 @@ fontSize  ：sz   乘以100
 	  
 	  
 									
+
 	  
+	  字间距：
+	    1em  = 16px
+	    200em  0.2em ：3pt
+ 
+	    (0.2 * 16) 72 / 191.9999938560002    2.6pt spc="260"
+ 
+ 
+		0.2 * 16 * 0.375000012 * 4/3
+ 
+		o.2 * 16 * 3/4 * 4/3 = 3.2
+		
+		16:9
+		    30px  o.3em : 3pt
+			50px  0.1em : 2pt
+			50px  0.3em : 5pt
+			100px 0.2em ：6pt
+			100px 0.3em : 10pt    
+			150px 0.3em : 15pt              
+ 
+			25px  0.3em : 3pt
+			
+			正确结论： wspace * webFontSize/3 / 1000 
+				=  wspace * webFontSize / 3000 
+				= pt 
+				
+				或者
+				       letterSpace * 1000 * webFontSize / 3000
+			    =  letterSpace * webFontSize / 3
+				= pt 
+				   
+			例子：300 * 100 / 3000 = 10
+			
+			猜测：3000 = dpi * 16  猜测准确
+		#########字间距最终结论：
+		              (wspace * webFontSize * 100) /dpi * (1/16) 
+					= (wspace * webFontSize * 100) /(dpi * 16) 
+					= pt
+
+					
+		还有行距的问题
+		行间距
+		
+		透明度：alpha = opacity * 100 * 1000;  其中opacity是网站的透明度，介于0和1之间
 	  
-	  还有行距的问题
 	  
 	  优化之一：如果图片没有滤镜或者别的操作，直接取图片资源，不经过inkscape
 	  
