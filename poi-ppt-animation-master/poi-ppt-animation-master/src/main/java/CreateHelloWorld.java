@@ -24,6 +24,8 @@ import org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlideLayoutPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
 import org.pptx4j.jaxb.Context;
+import org.pptx4j.pml.CTBackground;
+import org.pptx4j.pml.CTBackgroundProperties;
 import org.pptx4j.pml.Shape;
 import org.pptx4j.pml.Shape.NvSpPr;
 import org.slf4j.Logger;
@@ -39,6 +41,8 @@ public class CreateHelloWorld  {
 	
 	
 	protected static Logger log = LoggerFactory.getLogger(CreateHelloWorld.class);
+	
+	private static String BACKGROUND="<p:bg><p:bgPr><a:blipFill dpi=\"0\" rotWithShape=\"1\"><a:blip r:embed=\"${rID}\" cstate=\"print\"><a:lum/></a:blip><a:srcRect/><a:stretch><a:fillRect/></a:stretch></a:blipFill><a:effectLst/></p:bgPr></p:bg>";
 	
 //	private static boolean MACRO_ENABLE = true;
 		
@@ -79,12 +83,17 @@ public class CreateHelloWorld  {
 		
 		// Slide layout part
 		slidePart.addTargetPart(layoutPart);
+//		CTBackground ct = new CTBackground();
+//		CTBackgroundProperties a = new CTBackgroundProperties();
+//		a.set
+//		ct.setBgPr(a);
+//		slidePart.getContents().getCSld().setBg(ct);
 		
 				
 		// Create and add shape
+//		Shape sample = ((Shape)XmlUtils.unmarshalString(SAMPLE_SHAPE, Context.jcPML) );
 		Shape sample = ((Shape)XmlUtils.unmarshalString(getTextArea("插入一个文本框","仿宋","1850",tTextAyX, tTextAyY,
 			       tTextAyCX, tTextAyCY), Context.jcPML) );
-//		Shape sample = ((Shape)XmlUtils.unmarshalString(SAMPLE_SHAPE, Context.jcPML) );
 		slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(sample);
 		
 		Shape sample2 = ((Shape)XmlUtils.unmarshalString(getTextArea("你试试这个字体","黑体","1850", 0, 0,
@@ -131,7 +140,8 @@ public class CreateHelloWorld  {
 	
 	private static Shape createShape(SlidePart slidePart, String value) {
 		  org.pptx4j.pml.ObjectFactory graphicObjectFactory = new org.pptx4j.pml.ObjectFactory();
-		
+//		  CTBackground bg = graphicObjectFactory.createCTBackground();
+//		  bg.
 		  Shape shape = graphicObjectFactory.createShape();
 		
 		  ObjectFactory objectFactory = new ObjectFactory();
