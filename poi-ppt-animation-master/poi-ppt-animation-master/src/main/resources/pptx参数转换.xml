@@ -691,7 +691,7 @@ fontSize  ：sz   乘以100
  
 			25px  0.3em : 3pt
 			
-			正确结论： wspace * webFontSize/3 / 1000 
+			错误结论： wspace * webFontSize/3 / 1000 
 				=  wspace * webFontSize / 3000 
 				= pt 
 				
@@ -700,23 +700,78 @@ fontSize  ：sz   乘以100
 			    =  letterSpace * webFontSize / 3
 				= pt 
 				   
-			例子：300 * 100 / 3000 = 10
+			错误例子：300 * 100 / 3000 = 10
 			
-			猜测：3000 = dpi * 16  猜测准确
+			猜测：3000 = dpi * 16  猜测错误  3000还是不准，随着字体变大，偏差就显现出来了
+			
+###################################################################################################
 		#########字间距最终结论：
-		              (wspace * webFontSize * 100) /dpi * (1/16) 
-					= (wspace * webFontSize * 100) /(dpi * 16) 
+					4：3   结果是准确的
+		              (wspace * webFontSize * 100) / 1356
 					= pt
-
+					16：9（16：9多乘以2）结果是准确的
+		              (wspace * webFontSize * 100) / 1356 * 2
+					= pt
+###################################################################################################		
 					
+		描边：12700  12pt  = 152400
+		描边的颜色根据文字的rgba转换成相应的rgb颜色，保证描边的颜色跟字体颜色相同，字体的颜色跟透明度是分开的
+					
+					
+					
+		参考：rgba转rgb：http://www.yuangongju.com/color （直接f12看代码，debug）
+		http://blog.csdn.net/felix86/article/details/6679372
+						 
+		最近在做PNG解码，获得的数据是RGBA，但用来写BMP图像的函数只具有写RGB功能，所以想将RGBA转成RGB；
+		其实带有A通道的图片解码之后得到额数据是 RGBA，如果直接将A通道的数据舍去，将会使写出的图像失真。可以采用如下方法进行转换；
+		1.将 R,-G-B-A数据归一化， 记为：Source.R, Source.G, Source.B, Source.A （记的用浮点型啊）
+		2..提供一个背景色，但同时也应归一化；比如白色背景BGcolur = 1;或者黑色背景 BGcolur =0；
+		3.目标数据RGB:
+		Target.R = BGcolur *(1-Source.A ) + Source.R*Source.A ;
+		Target.G = BGcolur *(1-Source.A ) + Source.G*Source.A ;
+		Target.B = BGcolur *(1-Source.A ) + Source.B*Source.A ;
+
+		3.最后将Target.R，Target.G，Target.B再乘以255
+
+
+		这是从维基百科里看到的，实验了，是可以的！
+		额 ，对灯发誓！！！
+		
+		http://blog.csdn.net/junjun56/article/details/45866591
+		代码：
+		function RGB2RGBA(rgb_color,alp){  
+		//注：rgb_color的格式为#FFFFFFF，alp为透明度  
+		var r = parseInt("0x" + rgb_color.substr(1,2));  
+		var g = parseInt("0x" + rgb_color.substr(3,2));  
+		var b = parseInt("0x" + rgb_color.substr(5,2));  
+		var a = alp;  
+		return "rgba(" + r + "," + g + "," + b + "," + a + ")";  
+		}  
+  
+		function RGBA2RGB(rgba_color){  
+			//注：rgba_color的格式为rgba(0,0,0,0.1)  
+			var BGcolur = 1;  
+			var arr = rgba_color.split("(")[1].split(")")[0].split(",");  
+			var a = arr[3];  
+			var r = BGcolur * (1 - a) + arr[0] * a;  
+			var g = BGcolur * (1 - a) + arr[1] * a;  
+			var b = BGcolur * (1 - a) + arr[2] * a;  
+			return "rgb(" + r + "," + g + "," + b +")";  
+		}  
+
+###################################################################################################			
 		还有行距的问题
 		行间距
 		
-		透明度：alpha = opacity * 100 * 1000;  其中opacity是网站的透明度，介于0和1之间
+		透明度：alpha = (1 - opacity) * 100 * 1000;  
+						其中opacity是网站的透明度，介于0和1之间,ppt的透明度跟网站和为1
 	  
 	  
 	  优化之一：如果图片没有滤镜或者别的操作，直接取图片资源，不经过inkscape
-	  
+###################################################################################################	
+
+现在只差  行距  字体描边  水平垂直翻转
+
 参考：http://blog.sina.com.cn/s/blog_42cdca7d0100qcep.html	  
 pt (point，磅) 是一个物理长度单位，指的是72分之一英寸。
 px (pixel，像素)是一个虚拟长度单位，是计算机系统的数字化图像长度单位，如果px要换算成物理长度，需要指定精度DPI(Dots Per Inch，每英寸像素数)，在扫描打印时一般都有DPI可选。Windows系统默认是96dpi，Apple系统默认是72dpi。
