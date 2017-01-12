@@ -769,6 +769,15 @@ fontSize  ：sz   乘以100
 
 现在只差  行距 
 
+
+行距：  网页上的行距值，1000代表一倍行距
+double lineHeight = 100000;
+		lineHeight = lineHeight + (vspace / 1000) * 100000 * (1.16875);// (2.87-1)/ 1.6  根据ppt的值进行调整所得
+		lineHeight = lineHeight + (vspace / 1000) * 100000 * (1.25);// (3-1)/ 1.6  最新调整
+		
+ppt的行间距计算：行间距（pt) = 字体大小(pt) * 1.2
+		
+
 水平垂直翻转（翻转的同时align也变化） ok（垂直翻转位置不对，解决方案是取出reverse里面的translate值进行偏移 再向下偏移文本框行高的一半）
 ty = ty - rTy + this.height/2  其中rTy是垂直翻转的偏移量（负值）ty是文本框的原始偏移量， height是一行的高度，
 
