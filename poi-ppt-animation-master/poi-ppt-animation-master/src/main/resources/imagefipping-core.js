@@ -1,3 +1,7 @@
+/**
+https://s3.amazonaws.com/fs.clippingmagic.com/p/images2/167/577/220/drawCommands.json?AWSAccessKeyId=AKIAIE5JSQ2FKZL2FJ4Q&Expires=1485388800&Signature=RusSQ%2FeQlgbGn22iEVwzgW0shHU%3D
+userMask是重点对象
+*/
 function yoWorkerPostMessage(t, e) {
 	try {
 		self.postMessage(t, e)
@@ -4658,6 +4662,10 @@ var CanvasContextEx = function () {
 	t.process = o
 }
 (CanvasShrinker || (CanvasShrinker = {}));
+// 重要  
+// 来自：https://clippingmagic.com/api/images/22775761/bifotfkbdl12vvh69rmvtm0h54mo59n0n8nckpba332r7v46epk4?_=1484895144700
+// drawCommands.json：
+// https://s3.amazonaws.com/fs.clippingmagic.com/p/images2/167/577/220/drawCommands.json?AWSAccessKeyId=AKIAIE5JSQ2FKZL2FJ4Q&Expires=1485388800&Signature=RusSQ%2FeQlgbGn22iEVwzgW0shHU%3D
 var MaskEncoderBinary = function () {
 	function t() {
 		this.ary = new Uint8Array(1024),
@@ -5134,6 +5142,7 @@ var BrushArray = function () {
 	t
 }
 (), CanvasMask = function (t) {
+	// 画布遮罩  endian ：字节存储次序，元组排列顺序
 	function e(e, o, i) {
 		t.call(this, e, o),
 		this.levelToEndian32 = i,
@@ -5270,7 +5279,7 @@ var BrushArray = function () {
 	},
 	e
 }
-(CanvasEx), ToolModeEx = function () {
+(CanvasEx), ToolModeEx = function () { //重点 工具栏
 	function t(e, o, i, r, s, n, a, l, p) {
 		void 0 === n && (n = !1),
 		void 0 === a && (a = !1),
@@ -5304,6 +5313,7 @@ var BrushArray = function () {
 		return o.fillAliasedCircle(i, i, i, e),
 		o
 	},
+	// 重点
 	t.simple = function (e, o) {
 		return void 0 === o && (o = t.DefaultCursorSpec),
 		new t(e, [0, 0, 0], !1, !1, !1, !1, !1, o)
@@ -5328,6 +5338,7 @@ var BrushArray = function () {
 	t.prototype.drawSquare = function (t, e, o) {
 		this.isEraser ? this.mask && this.mask.clearSquare(t, e, o) : this.mask && this.mask.drawBrush(t, e, o, this.getBrush(o))
 	},
+	// 重要
 	t.prototype.drawLine = function (t, e, o) {
 		this.isEraser ? this.mask && this.mask.clearLine(t, e, o) : this.mask && this.mask.drawBrushLine(t, e, o, this.getBrush(o))
 	},
@@ -5928,6 +5939,7 @@ var YoWebSocket = function () {
 		Util.gaTrack("WebSocket", this.lastDebugUrl, "error", 0),
 		this.opts.customOnError && !this.opts.customOnError(t) || this.retryable.executionError(t)
 	},
+	// 重要，左边canvas画完后，消息通知
 	t.prototype.onMessage = function (t) {
 		if ("string" == typeof t.data) {
 			var e = JSON.parse(t.data);
@@ -6182,6 +6194,7 @@ var SavedMask;
 			giveUpAfterSilentRetries: !0
 		})
 	}
+	// 重要：userMask，drawcommand.json中的key
 	function d() {
 		var t = Callbacks.M.userMask;
 		c({
@@ -6439,6 +6452,7 @@ var ViewPortAnimation = function () {
 			null == e && null != i && (e = i.element),
 			null != t && o.mouseMoveImpl(e, t.pageX, t.pageY, t.which)
 		},
+		// 重点！
 		this.mouseMoveImpl = function (t, e, i, r) {
 			if (o.updateCoords(e, i, t || o.activeCanvas),
 				o.currentApp.mouseMoveHandler(e, i, o.mouseButton),
@@ -10280,8 +10294,8 @@ var M;
 			C += ", " + StickySettings.Settings.Crop.ObjectSize.getCurrentDisplay().toLowerCase() + " " + Tr.s("object"),
 			C += ", " + StickySettings.Settings.Crop.VerticalAlignment.getCurrentDisplay().toLowerCase() + " " + Tr.s("alignment"),
 			C += ", " + StickySettings.Settings.Crop.Shadows.getCurrentDisplay().toLowerCase() + " " + Tr.s("shadows")),
-		C += ", " + Tr.s("rotated") + " " + Util.signedNumber(t.settings.rotateAngleDeg) + "��",
-		C += ", " + Tr.s("straightened") + " " + Util.signedNumber(Util.roundTo(t.settings.straightenAngleDeg, 1)) + "��",
+		C += ", " + Tr.s("rotated") + " " + Util.signedNumber(t.settings.rotateAngleDeg) + "£",
+		C += ", " + Tr.s("straightened") + " " + Util.signedNumber(Util.roundTo(t.settings.straightenAngleDeg, 1)) + "£",
 		Css.resultDialog.SettingsSummary.CropApp.Value.$().text(C);
 		var y = ShadowApp.getNumEllipseShadows(),
 		v = Tr.s("no oval shadows");
@@ -10531,6 +10545,7 @@ var M;
 		}),
 		Ji = 0,
 		qi = 0,
+		// 重要
 		t.userMask = ToolMode.buildUserMask(t.imageCanvas.width(), t.imageCanvas.height()),
 		t.hairMask = ToolMode.buildHairMask(t.imageCanvas.width(), t.imageCanvas.height()),
 		ji.isShopImage ? Css.not_shop_image_content.$().remove() : Css.shop_image_content.$().remove(),
@@ -10586,6 +10601,7 @@ var M;
 		return _(t) ? t : _(e) ? e : o
 	}
 	function R(e, o) {
+		// 重要
 		e.hasOwnProperty("userMask") && t.userMask.decode(e.userMask, e.maskVersion),
 		e.hasOwnProperty("hairMask") && t.hairMask.decode(e.hairMask, e.maskVersion),
 		HairPalettes.parseAll(e.hairPalettes);
@@ -10699,6 +10715,7 @@ var M;
 	function L(e) {
 		void 0 === e && (e = !0),
 		e && Undo.push(),
+		// 重要
 		t.userMask.clearAll(),
 		setTimeout(function () {
 			Ho(!0),
@@ -11383,8 +11400,8 @@ var M;
 		Ui.bottom0 = Math.max(P, D),
 		Css.CropApp.StraightenSpinner.reset.$().toggleClass("disabled", 0 == t.settings.straightenAngleDeg),
 		Css.CropApp.RotateSpinner.reset.$().toggleClass("disabled", 0 == t.settings.rotateAngleDeg),
-		Css.CropApp.StraightenSpinner.display.$().text(t.settings.straightenAngleDeg.toFixed(1) + "��"),
-		Css.CropApp.RotateSpinner.display.$().text(t.settings.rotateAngleDeg + "��"),
+		Css.CropApp.StraightenSpinner.display.$().text(t.settings.straightenAngleDeg.toFixed(1) + "£"),
+		Css.CropApp.RotateSpinner.display.$().text(t.settings.rotateAngleDeg + "£"),
 		o && ShadowApp.updateMirrorShadowCanvas(),
 		ViewPort.main.rotationCropUpdated(e, Pe()),
 		ViewPort.subViewPort.rotationCropUpdated(e, Pe()),
@@ -11726,7 +11743,7 @@ var M;
 			tr[t + 3] = e
 		}
 	}
-	function Po(e) {
+	function Po(e) { // 重要
 		switch (e.response) {
 		case Const.ServerMaskReset:
 			Io(),
@@ -11841,6 +11858,7 @@ var M;
 		return h(),
 		qi != Ji || Qi || StartupProgress.visible || !a()
 	}
+	// 重要
 	function Ro(t) {
 		"ControlByte" == t.mode ? ControlByteDecoder.decode(t.arraybuffer, function (t) {
 			Bo(t, 0)
@@ -11969,6 +11987,7 @@ var M;
 				cropAspectRatio: pe()
 			}))
 	}
+	// 重要
 	function qo(t, e, o, i, r, s) {
 		ei({
 			command: t,
