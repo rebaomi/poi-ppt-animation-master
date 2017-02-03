@@ -2698,6 +2698,7 @@ var Anchor;
 	t.opposite = e
 }
 (Anchor || (Anchor = {}));
+// 坐标点
 var Point = function () {
 	function t(t, e) {
 		this.x = t,
@@ -2712,9 +2713,11 @@ var Point = function () {
 	t.from = function (e) {
 		return new t(e.x, e.y)
 	},
+	// 无穷大
 	t.prototype.inFinite = function () {
 		return isFinite(this.x) && isFinite(this.y)
 	},
+	// 插值
 	t.prototype.interpolate = function (e, o) {
 		return new t(this.x * (1 - o) + e.x * o, this.y * (1 - o) + e.y * o)
 	},
@@ -2723,6 +2726,7 @@ var Point = function () {
 		o = this.y - t.y;
 		return e * e + o * o
 	},
+	// 平方根
 	t.prototype.distanceTo = function (t) {
 		return Math.sqrt(this.distanceSqrTo(t))
 	},
@@ -3601,6 +3605,7 @@ var Point = function () {
 		return (new t).setArgb(this)
 	},
 	t.prototype.aInt = function () {
+		// t.FloatToInt = 1 / 255
 		return Math.floor(this.af * t.FloatToInt)
 	},
 	t.prototype.rInt = function () {
@@ -4274,6 +4279,7 @@ var CanvasContextEx = function () {
 	t.prototype.rotate = function (t) {
 		this.context.rotate(t)
 	},
+	// 重点，画路径的时候调用了这里
 	t.prototype.beginPath = function () {
 		this.context.beginPath()
 	},
@@ -5857,6 +5863,7 @@ var YoWebSocketState;
 	t[t.Error = 3] = "Error"
 }
 (YoWebSocketState || (YoWebSocketState = {}));
+// websocket
 var YoWebSocket = function () {
 	function t(t) {
 		var e = this;
@@ -6461,7 +6468,7 @@ var ViewPortAnimation = function () {
 				var s = o.clickImageCenterX_o - (e - o.clickX_c) / o.zoomScale,
 				n = o.clickImageCenterY_o - (i - o.clickY_c) / o.zoomScale;
 				o.setView(s, n, null),
-				Callbacks.M.Review.reset()
+				Callbacks.M.Review.reset() // 轮廓回顾
 			}
 			o.refreshAllViews()
 		},
@@ -6877,6 +6884,7 @@ var ViewPortAnimation = function () {
 			o.id = null,
 			o.ignoreClear = !1)
 	},
+	// 绘制边缘的起始
 	t.prototype.refreshView = function (t) {
 		function e(t, e, o, r) {
 			i.beginPath(),
@@ -6945,6 +6953,7 @@ var ViewPortAnimation = function () {
 			}
 		}
 	},
+	// 绘制路径的初始方法
 	t.prototype.drawClipped = function (t, e, o) {
 		function i(t, o, i, s) {
 			if (t) {
@@ -6960,6 +6969,8 @@ var ViewPortAnimation = function () {
 			r.drawRotated(t, e, o)
 		})
 	},
+	// 重点，画路径的时候调用了这里
+	// 就是这个方法！！！！！！ 黄色的路径就是这里绘制的，终于让老子找到了，太不容易了
 	t.prototype.drawRotated = function (t, e, o) {
 		function i(t, o) {
 			e.setGlobalAlpha(o),
@@ -7298,7 +7309,7 @@ var BufferWriter = function () {
 	t.MaskInput = 1073741823,
 	t
 }
-(), RgbHistogram = function () {
+(), RgbHistogram = function () { // rgb直方图，websocket中传输，并不清楚有什么卵用
 	function t() {
 		this.data = new Float32Array(t.NumBins)
 	}
@@ -9024,6 +9035,7 @@ var ShadowApp;
 					return this.handles[t];
 			return null
 		},
+		// 重点，可能是画路径的方法
 		t.prototype.drawHandles = function (t) {
 			if (!this.autoHideControls() || so && so.shadows && so.shadows.indexOf(this) >= 0)
 				for (var e = so.handle, o = this.handles.length - 1; o >= 0; o--) {
@@ -9405,10 +9417,12 @@ var ShadowApp;
 			var t = this.getHitRadius_i();
 			return Util.sqr(this.container.xr - this.getX()) + Util.sqr(this.container.yr - this.getY()) < t * t
 		},
+		// 重点，可能是画路径的方法
 		t.prototype.drawWrapper = function (t, e) {
 			this.isVisible && this.draw(t, e, this.getX(), this.getY())
 		},
 		t.prototype.draw = function (t, e, o, i) {},
+		// 重要 
 		t.prototype.drawTranslateHandle = function (t, e, o, i, r, s) {
 			var n = l(o),
 			a = l(i),
@@ -9569,6 +9583,7 @@ var ShadowApp;
 				this.geometryIsValid = this.isValid()
 			}
 		},
+		// 重点，可能是画路径的方法
 		o.prototype.drawControls = function (t) {
 			function e(e, o) {
 				void 0 === o && (o = "#0f0"),
@@ -12176,6 +12191,7 @@ var M;
 		countForeground: 0,
 		countBackground: 0
 	},
+	// 设置路径的地方，贝塞尔曲线点集合
 	t.bezierSet = [];
 	var Ti = [];
 	t.detectedCorners = [];
@@ -12366,7 +12382,7 @@ var M;
 	t.colorLevelsResetLevels = Co,
 	t.colorLevelsResetAll = yo,
 	t.colorLevelsAuto = vo,
-	t.previewCanvasImageDataSmart = bo,
+	t.previewCanvasImageDataSmart = bo, // 右侧预览画布图片
 	t.updateColorLevels = ko;
 	var hr = new Float32Array(256);
 	t.sendImageHistogram = Vo;
